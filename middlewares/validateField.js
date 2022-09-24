@@ -15,7 +15,7 @@ const validateField= (req, res, next) => {
       message: "email is required"
     })
   }
-  if(!req.body.toggleButton){
+  if(req.body.toggleButton == null){
     return res.status(400).send({
       status: "fail",
       message: "toggleButton is required"

@@ -5,6 +5,7 @@ const axios = require('axios').default;
 const contacts= (req, res) => { 
   const url = "https://api.getresponse.com/v3/contacts";
   const api_token = "a5s4gbvvdz3phr48wmo7qcqm1byt8se2";
+  const dayOfCycle = 100;
   
 
   const toggleButton = req.body.toggleButton;
@@ -22,6 +23,7 @@ const contacts= (req, res) => {
     campaign: {
       campaignId: campaignId
     },
+    dayOfCycle: dayOfCycle,
     email: req.body.email
   }
 

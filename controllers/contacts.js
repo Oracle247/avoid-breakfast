@@ -5,9 +5,8 @@ const axios = require('axios').default;
 const contacts= (req, res) => { 
   const url = "https://api.getresponse.com/v3/contacts";
   const api_token = "a5s4gbvvdz3phr48wmo7qcqm1byt8se2";
-  const dayOfCycle = 100;
+  const dayOfCycle = 0;
   
-
   const toggleButton = req.body.toggleButton;
   console.log(toggleButton);
 
@@ -18,6 +17,7 @@ const contacts= (req, res) => {
     console.log("ran")
     var campaignId = "QdbEB";
   }
+  
   const reqData = {
     name: req.body.name,
     campaign: {
